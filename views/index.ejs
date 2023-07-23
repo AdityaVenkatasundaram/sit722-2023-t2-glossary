@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>SIT 722 DevOps Glossary</h1>
+    <p>Welcome to my website showing a collection of DevOps terms and their brief descriptions</p>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Id#</th>
+          <th>Term</th>
+          <th>Description</th>
+          <th>References</th>
+        </tr>
+        <% glossary.forEach((row) => { %>
+          <tr>
+            <td><%= row.id %></td>
+            <td><%= row.Term %></td>
+            <td><%= row.Description %></td>
+            <td><%= row.reference %></td>
+          </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>
